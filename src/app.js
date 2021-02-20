@@ -1,8 +1,4 @@
 const express = require("express");
-const expressLayouts = require("express-ejs-layouts");
-
-const indexRouter = require("./routes/index");
-const profileRouter = require("./routes/profile");
 
 const app = express();
 
@@ -16,8 +12,12 @@ app.use("/js", express.static(__dirname + "/js"));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.set("layout", __dirname + "/public/layout");
-app.use(expressLayouts);
 
 // Routes
-app.use("/", indexRouter);
-app.use("/profile", profileRouter);
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
+app.get("/profile", (req, res) => {
+  res.render("profile");
+});
