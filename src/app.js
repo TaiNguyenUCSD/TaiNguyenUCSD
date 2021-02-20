@@ -1,9 +1,10 @@
 const express = require("express");
-const app = express();
 const expressLayouts = require("express-ejs-layouts");
 
 const indexRouter = require("./routes/index");
 const profileRouter = require("./routes/profile");
+
+const app = express();
 
 // Set static assets
 app.use(express.static("/public/assets"));
@@ -20,5 +21,3 @@ app.use(expressLayouts);
 // Routes
 app.use("/", indexRouter);
 app.use("/profile", profileRouter);
-
-const PORT = process.env.PORT || 8081;
