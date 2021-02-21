@@ -16,6 +16,7 @@ let firebaseConfig = {
   messagingSenderId: "923975331245",
   appId: "1:923975331245:web:0af52cc9310438e5158524",
   measurementId: "G-RXRMNHCW4L",
+  databaseURL: "https://suitefinder-cf0fe-default-rtdb.firebaseio.com/"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
