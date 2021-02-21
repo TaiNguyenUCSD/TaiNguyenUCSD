@@ -21,6 +21,10 @@ app.get("/profile", (req, res) => {
   res.render("profile");
 });
 
+a.get("/about", (req, res) => {
+  res.render("about");
+});
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}...`);
