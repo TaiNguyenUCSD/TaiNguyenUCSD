@@ -15,9 +15,14 @@ app.set("layout", __dirname + "/public/layout");
 
 // Routes
 app.get("/", (req, res) => {
-  res.render("index");
+  res.send("poop");
 });
 
 app.get("/profile", (req, res) => {
   res.render("profile");
+});
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`);
 });
