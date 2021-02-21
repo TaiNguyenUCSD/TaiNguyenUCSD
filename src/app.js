@@ -21,7 +21,7 @@ app.get("/profile", (req, res) => {
   res.render("profile");
 });
 
-a.get("/about", (req, res) => {
+app.get("/about", (req, res) => {
   res.render("about");
 });
 
