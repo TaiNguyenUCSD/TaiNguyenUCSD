@@ -15,7 +15,7 @@ app.set("layout", __dirname + "/public/layout");
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("poop");
+  res.render("index");
 });
 
 app.get("/profile", (req, res) => {
