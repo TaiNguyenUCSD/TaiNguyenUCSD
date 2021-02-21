@@ -1,6 +1,12 @@
-let name = document.getElementById("name");
+let fname = document.getElementById("name");
 let submit = document.getElementById("submit-name");
 
-submit.addEventListener("click", function () {
-  console.log(name.value);
-});
+var database = firebase.database();
+function writeToFirebase(username) {
+  firebase.database().ref('users/' + username).set({
+    title: username
+  });
+}
+
+submit.addEventListener("click", fname);
+
