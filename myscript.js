@@ -1,14 +1,13 @@
 // Function to change the content of t2
-function modifyText() {
-    const t2 = document.getElementById("t2");
-    if (t2.firstChild.nodeValue == "three") {
-      t2.firstChild.nodeValue = "two";
-    } else {
-      t2.firstChild.nodeValue = "three";
+var count = 1;
+    function setColor(btn, color) {
+        var property = document.getElementById(btn);
+        if (count == 0) {
+            property.style.backgroundColor = "#FFFFFF"
+            count = 1;        
+        }
+        else {
+            property.style.backgroundColor = "#7FFF00"
+            count = 0;
+        }
     }
-  }
-  
-  // Add event listener to table
-  const el = document.getElementById("outside");
-  el.addEventListener("click", modifyText, false);
-  
