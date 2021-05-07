@@ -3,11 +3,11 @@ var count = 1;
     function setColor(btn, color) {
         var property = document.getElementById(btn);
         if (count == 0) {
-            property.style.backgroundColor = "#FFFFFF"
+            property.style.backgroundColor = "#00FFFF"
             count = 1;        
         }
         else {
-            property.style.backgroundColor = "#7FFF00"
+            property.style.backgroundColor = "#FFA500"
             count = 0;
         }
     }
